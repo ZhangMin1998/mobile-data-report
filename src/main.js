@@ -17,5 +17,12 @@ app.use(store)
 app.use(router)
 // 将$echarts注册为全局属性
 app.config.globalProperties.$echarts = ECharts
+// app.config.globalProperties.$bmap = window.BMapGL
+// app.config.globalProperties.$bmap2 = window.BMap
+// app.config.globalProperties.$initMap = window.initMap
+// app.config.globalProperties.$mapvgl = window.mapvgl
+// app.config.globalProperties.$mapv = window.mapv
+// app.config.globalProperties.$purpleStyle = window.purpleStyle
+// app.config.globalProperties.$darkStyle = window.darkStyle
 // 挂载应用
 app.mount('#app')

@@ -3,18 +3,27 @@
     <div class="data-wrapper"></div>
     <top-header />
     <sales-bar />
+    <sales-line />
+    <sales-pie />
+    <sales-map />
   </div>
 </template>
 
 <script>
 import TopHeader from '@/components/TopHeader'
 import SalesBar from '@/components/SalesBar'
+import SalesLine from '@/components/SalesLine'
+import SalesPie from '@/components/SalesPie'
+import SalesMap from '@/components/SalesMap'
 
 export default {
   name: 'HomeView',
   components: {
     TopHeader,
-    SalesBar
+    SalesBar,
+    SalesLine,
+    SalesPie,
+    SalesMap
   },
   data () {
     return {
