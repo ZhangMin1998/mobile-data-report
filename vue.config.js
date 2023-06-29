@@ -16,10 +16,10 @@ module.exports = {
       postcss: {
         postcssOptions: {
           plugins: [
-            // postcss
-            require('postcss-px2rem')({
-              remUnit: 16
-            })
+            postcss
+            // require('postcss-px2rem')({
+            //   remUnit: 16
+            // })
           ]
         }
       }
