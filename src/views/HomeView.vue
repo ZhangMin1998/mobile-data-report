@@ -6,6 +6,8 @@
     <sales-line />
     <sales-pie />
     <sales-map />
+    <sales-sun />
+    <sales-radar />
   </div>
 </template>
 
@@ -15,6 +17,8 @@ import SalesBar from '@/components/SalesBar'
 import SalesLine from '@/components/SalesLine'
 import SalesPie from '@/components/SalesPie'
 import SalesMap from '@/components/SalesMap'
+import SalesSun from '@/components/SalesSun'
+import SalesRadar from '@/components/SalesRadar'
 
 export default {
   name: 'HomeView',
@@ -23,7 +27,9 @@ export default {
     SalesBar,
     SalesLine,
     SalesPie,
-    SalesMap
+    SalesMap,
+    SalesSun,
+    SalesRadar
   },
   data () {
     return {
