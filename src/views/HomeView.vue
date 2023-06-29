@@ -1,53 +1,47 @@
 <template>
   <div class="home">
-    <div class="echarts-box">
-      <vue-echarts :option="option" />
-    </div>
+    <div class="data-wrapper"></div>
+    <top-header />
+    <sales-bar />
   </div>
 </template>
 
 <script>
+import TopHeader from '@/components/TopHeader'
+import SalesBar from '@/components/SalesBar'
 
 export default {
   name: 'HomeView',
+  components: {
+    TopHeader,
+    SalesBar
+  },
   data () {
     return {
       option: {}
     }
   },
   mounted () {
-    this.option = {
-      title: {
-        text: 'ECharts 入门示例'
-      },
-      tooltip: {},
-      legend: {
-        data: ['销量']
-      },
-      xAxis: {
-        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-      },
-      yAxis: {},
-      series: [{
-        name: '销量',
-        type: 'bar',
-        data: [5, 20, 36, 10, 10, 20]
-      }]
-    }
+
   }
 }
 </script>
 
 <style lang="scss">
 .home{
-  .text{
-    font-size: 32px;
-  }
-  .echarts-box{
-    .echarts {
-      width: 100%;
-      height: 500px;
-    }
+  position: relative;
+  height: 100%;
+  .data-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // height: 1336px;
+    z-index: 1;
+    background-image: url("//datav.oss-cn-hangzhou.aliyuncs.com/uploads/images/44b2ad11c37339db11f8ca5d59c5b31c.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 }
 </style>
