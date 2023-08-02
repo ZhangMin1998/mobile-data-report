@@ -251,7 +251,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .sales-sun {
   position: absolute;
   top: 2450px;

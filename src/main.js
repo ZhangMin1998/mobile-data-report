@@ -6,7 +6,7 @@ import store from './store'
 import * as ECharts from 'echarts'
 import VueECharts from 'vue-echarts'
 
-import './styles/reset.css'
+// import './styles/reset.css'
 
 // Vue.config.productionTip = false
 

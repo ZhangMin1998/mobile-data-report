@@ -12,7 +12,7 @@ export default {
   mounted () {
     // 一、初始化地图
     const initBMap = () => {
-      var map = window.initMap({
+      const map = window.initMap({
         tilt: 0,
         center: [113.487899, 31.249162],
         zoom: 4,
@@ -23,24 +23,24 @@ export default {
 
     // 二、准备数据源
     const initData = () => {
-      var cities = [
+      const cities = [
         '北京', '天津', '上海', '重庆', '石家庄', '太原', '呼和浩特', '哈尔滨', '长春',
         '沈阳', '济南', '南京', '合肥', '杭州', '南昌', '福州', '郑州', '武汉', '长沙', '广州',
         '南宁', '西安', '银川', '兰州', '西宁', '乌鲁木齐', '成都', '贵阳', '昆明', '拉萨', '海口'
       ]
 
-      var data = []
+      const data = []
       const random = 100
-      var targetCity = window.mapv.utilCityCenter.getCenterByCityName('北京')
-      var curve = new window.mapvgl.BezierCurve()
+      const targetCity = window.mapv.utilCityCenter.getCenterByCityName('北京')
+      const curve = new window.mapvgl.BezierCurve()
       for (let i = 0; i < random; i++) {
-        var startCity = window.mapv.utilCityCenter.getCenterByCityName(cities[parseInt(cities.length * Math.random())])
+        const startCity = window.mapv.utilCityCenter.getCenterByCityName(cities[parseInt(cities.length * Math.random())])
         curve.setOptions({
           start: [startCity.lng - 5 + 10 * Math.random(), startCity.lat - 5 + 10 * Math.random()],
           end: [targetCity.lng, targetCity.lat]
         })
 
-        var curveData = curve.getPoints()
+        const curveData = curve.getPoints()
         data.push({
           geometry: {
             type: 'LineString',
@@ -54,9 +54,9 @@ export default {
     // 三、绘制数据源
     const setData = (data, map) => {
       // 1.生成 mapval 视图 View
-      var view = new window.mapvgl.View({ map })
+      const view = new window.mapvgl.View({ map })
       // 3.初始化 mapvgl 的 LineLayer 对象
-      var lineLayer = new window.mapvgl.LineLayer({
+      const lineLayer = new window.mapvgl.LineLayer({
         // style: 'normal', // 'chaos' 'normal'   动画方式
         color: 'rgba(55,20,250,0.3)'
       })
@@ -66,7 +66,7 @@ export default {
       lineLayer.setData(data)
 
       // 再添加一个 LinePointLayer 对象
-      var linePointLayer = new window.mapvgl.LinePointLayer({
+      const linePointLayer = new window.mapvgl.LinePointLayer({
         size: 6,
         speed: 15,
         color: 'rgba(255, 255, 0, 0.6)',
@@ -78,14 +78,14 @@ export default {
       linePointLayer.setData(data)
     }
 
-    var map = initBMap() // 初始化地图
-    var data = initData() // 准备数据源
+    const map = initBMap() // 初始化地图
+    const data = initData() // 准备数据源
     setData(data, map) // 绘制数据源
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .sales-map{
   position: absolute;
   top: 1850px;

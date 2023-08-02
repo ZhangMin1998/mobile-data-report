@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .home{
   position: relative;
   height: 100%;
