@@ -1,5 +1,8 @@
 # mobile-data-report
 
+## 预览地址
+https://zhangmin1998.github.io/mobile-data-report//dist/index.html#/
+
 ## Project setup
 ```
 npm install
